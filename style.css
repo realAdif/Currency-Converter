@@ -1,0 +1,48 @@
+body{
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+}
+
+#input,#ExchangeRate{
+    font-size: 25px;
+    width: 320px;
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border: 5px solid #2A2D34;
+    border-radius: 10px;
+    background-color: #A0DDE6;
+    box-shadow: 5px 10px #888888;
+}
+
+ #main{
+    width: 390px;
+    padding: 100px;
+    border: 5px solid #2A2D34;
+    border-radius: 10px;
+    background-color: #2A2D34;
+    box-shadow: 5px 10px #888888;
+    
+ }
+
+ #button{
+    width: 250px;
+    padding: 12px 28px;
+    margin-left: 40px;
+    margin-top: 20px;
+    box-shadow: 0 8px 16px 0 #888888, 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+   
+ }
+ #optionCrypto,#crypto{
+    display: inline-block;
+ }
+
+#optionCurrency,#currency{
+    display: inline-block;
+}
+
+ #optionCrypto,#optionCurrency{
+    padding: 5px;
+    margin-left: 5px;
+ }
