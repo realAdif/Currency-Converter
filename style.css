@@ -4,7 +4,7 @@ body{
     margin: auto;
 }
 
-#input,#ExchangeRate{
+#input,#ExchangeRate,#cryptoInput{
     font-size: 25px;
     width: 320px;
     padding: 10px;
@@ -37,12 +37,39 @@ body{
  #optionCrypto,#crypto{
     display: inline-block;
  }
+ #numberOfCrypto,#amount{
+   display: inline-block;
+ }
+#typeCurrency, #inputCurrency{
+   display: inline-block;
+ }
 
 #optionCurrency,#currency{
     display: inline-block;
 }
 
- #optionCrypto,#optionCurrency{
+ #optionCrypto,#optionCurrency,#amount,#typeCurrency{
     padding: 5px;
     margin-left: 5px;
+ }
+
+ #news{
+   margin-top: 85px;
+   height: 72%; 
+   width: 180px;
+   position:fixed;
+   top: 0; 
+   left: 2px;
+   background-color: #2A2D34; 
+   padding-top: 20px;
+   box-shadow: 5px 10px #888888;
+   border-radius: 4px;
+   
+   
+ }
+ #newsLinks{
+   font-size: 25px;
+   text-align: center;
+   border: 5px solid #2A2D34;
+
  }
