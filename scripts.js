@@ -1,20 +1,27 @@
-var requestUrlBTC = 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=AUD,JPY,EUR&tryConversion=true'
-var requestUrlETH = 'https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=AUD,JPY,EUR&tryConversion=true'
+var requestUrl = 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=AUD,JPY,EUR&tryConversion=true'
+var testUrl = 'https://v6.exchangerate-api.com/v6/cf8dd31c0dcdffdf669dd241/pair/EUR/USD/50.00';
 var exchangeRate = document.querySelector('#rate');
 var buttonEl = document.querySelector('#button');
 var cryptoOption = document.querySelector('#optionCrypto');
-console.log(cryptoOption);
 
+
+function API(){
+    fetch(testUrl)
+    .then(function(r){
+        console.log(r);
+        r.json()
+        .then(function(data){
+            console.log(data);
+        })
+    })
+}
+API();
 
 buttonEl.addEventListener('click',function(){
-    var requestUrl;
-    cryptoOption.value;
-    if(cryptoOption = 'BTC'){
-        requestUrl = requestUrlBTC;
-    }else{
-        console.log("this works")
-    }
+    
+    console.log(cryptoOption.value);
     fetch(requestUrl)
+
     .then(function(r){
         console.log(r)
         r.json()
