@@ -33,12 +33,9 @@ buttonEl.addEventListener('click',function(){
     }) 
 });
 
-<<<<<<< HEAD
 // This aditya line of code 
-=======
 //chujun test
 
 
->>>>>>> a776d5cb6932dd5559b6433bf6486f7949e9d5c8
 
 
