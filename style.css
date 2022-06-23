@@ -1,7 +1,8 @@
 body{
-    background-color: white;
+    background-color: #c1ffc1;
     max-width: 500px;
     margin: auto;
+    background-image: url(images/rainingmoney.gif);
 }
 
 #input,#ExchangeRate,#cryptoInput{
@@ -10,10 +11,15 @@ body{
     padding: 10px;
     padding-bottom: 25px;
     padding-top: 25px;
-    border: 5px solid #698b69;
+    
     border-radius: 10px;
     background-color: #c1ffc1;
-    box-shadow: 5px 10px #8fbc8f;
+    
+}
+
+#input:hover,#ExchangeRate:hover,#cryptoInput:hover,#news:hover,#main:hover{
+   box-shadow: 0px 0px 10px 10px #8fbc8f;
+   
 }
 
  #main{
@@ -22,9 +28,14 @@ body{
     border: 5px solid #698b69;
     border-radius: 10px;
     background-color: #698b69;
-    box-shadow: 5px 10px #888888;
     position: relative;
     right: 300px;
+ }
+ #description,#footer{
+   position: relative;
+   right: 300px;
+   padding: 10px;
+   font-family: serif;
  }
 
  #button{
@@ -32,7 +43,7 @@ body{
     padding: 12px 28px;
     margin-left: 40px;
     margin-top: 20px;
-    box-shadow: 0 8px 16px 0 #888888, 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 8px 16px 0, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    
  }
  #optionCrypto,#crypto{
@@ -55,22 +66,16 @@ body{
  }
 
  #news{
-   margin-top: 85px;
-   height: 72%; 
+   margin-top: 170px;
+   margin-right: 200px;
+   height: 64%; 
    width: 300px;
    position:fixed;
    top: 0; 
    right: 90px;
    background-color: #698b69; 
    padding-top: 20px;
-   box-shadow: 5px 10px #888888;
-   border-radius: 4px;
-   
-   
- }
- #newsLinks{
+   border-radius: 10px;
    font-size: 25px;
    text-align: center;
-   border: 5px solid #698b69;
-
  }
