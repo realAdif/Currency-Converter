@@ -36,7 +36,7 @@ buttonEl.addEventListener('click',function(){
 });
 
 function getNews() {
-    var newsUrl = "https://newsdata.io/api/1/news?apikey=pub_85818e8fe3690ecbe2081cc04c5826a5838f&language=en&q=money";
+    var newsUrl = "https://newsdata.io/api/1/news?apikey=pub_85818e8fe3690ecbe2081cc04c5826a5838f&language=en&q=currency";
     fetch(newsUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
@@ -49,6 +49,7 @@ function getNews() {
 };
 
 var newsLinksContainer = document.getElementById("newsLinks");
+ var newsEl = document.createElement('ul');
 
 function displayNews(data) {
     const newsList = data.results;
@@ -57,7 +58,6 @@ function displayNews(data) {
         return;
     }
     for (var i = 0; i < 5; i++) {
-        var newsEl = document.createElement('ul');
         var newsLink = document.createElement('li');
         var newsLinkEl = document.createElement('a')
         newsLinkEl.setAttribute('href', newsList[i].link);
@@ -69,7 +69,5 @@ function displayNews(data) {
         newsLinksContainer.appendChild(newsEl);
     }
 }
-
-
 
 getNews();
