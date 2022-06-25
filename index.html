@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Crypto Converter</title>
-</head>
-<body>
-    <h1 id="description">Currency Converter</h1>
-    <div id="description">Converts amounts from one currency to two others. You can choose to display three different currencies, euros, yen, or dollars, and enter a value in one currency to be converted into the other selected currencies.</div>
-    
-    <section id="main">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Currency Converter</h1>
+      <div id="description">
+        Converts amounts from one currency to two others. You can choose to
+        display three different currencies, euros, yen, or dollars, and enter a
+        value in one currency to be converted into the other selected
+        currencies.
+      </div>
+    </div>
 
+      <section id="main">
         <section id="input">
-            <div id="numberOfCrypto">Currency One:</div>
-            <input id="amount" type="number" value="1" min="1" max="100">
-            <select id="optionCurrency">
-                <option>AUD</option>
-                <option>USD</option>
-                <option>AED</option>
-                <option>INR</option>
-            </select>
+          <div id="numberOfCrypto">Currency One:</div>
+          <input id="amount" type="number" value="1" min="1" max="100" />
+          <select id="optionCurrency">
+            <option>AUD</option>
+            <option>USD</option>
+            <option>AED</option>
+            <option>INR</option>
+          </select>
         </section>
-        <br>
+        <br />
 
         <section id="cryptoInput">
-            <div id="numberOfCrypto">Currency Two:</div>
-            <select id="optionCurrency">
-                <option>AUD</option>
-                <option>USD</option>
-                <option>AED</option>
-                <option>INR</option>
-            </select>
-            <br>
-            
-            
+          <div id="numberOfCrypto">Currency Two:</div>
+          <select id="optionCurrency">
+            <option>AUD</option>
+            <option>USD</option>
+            <option>AED</option>
+            <option>INR</option>
+          </select>
+          <br />
         </section>
-        
 
+        <br />
 
-        <br>
-        
         <section id="ExchangeRate">
-            <div>Exchange Rate:</div>
-            <div id="rate">----</div>
-            <div>Conversion Result:</div>
-            <div id="result">----</div>
+          <div>Exchange Rate:</div>
+          <div id="rate">----</div>
+          <div>Conversion Result:</div>
+          <div id="result">----</div>
         </section>
         <button id="button">confirm to convert</button>
-    </section>
+      </section>
 
-    <section id="news">
-        <div id="newsLinks" >
-            <span>News Links</span>
+      <section id="news">
+        <div id="newsLinks">
+          <span id="newsTitle">News Links</span>
         </div>
-        <button id="btn_prev"><</button>
-        <div id="page">0</div>
-        <button id="btn_next">></button>
-    </section>
-   
-    <footer id="footer">
-        <p>Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby Hurst, Michael Clancy © 2022</p>
-    </footer>
-    
-    
-    <script src="scripts.js"></script>
-</body>
+        <div id="newsBottom">
+          <button id="btn_prev"><</button>
+          <div id="page">0</div>
+          <button id="btn_next">></button>
+        </div>
+      </section>
 
+
+    <footer id="footer">
+      <p>
+        Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby
+        Hurst, Michael Clancy © 2022
+      </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>

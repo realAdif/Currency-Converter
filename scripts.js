@@ -36,11 +36,14 @@ buttonEl.addEventListener('click',function(){
 });
 
 function getNews() {
-    var newsUrl = "https://newsdata.io/api/1/news?apikey=pub_85818e8fe3690ecbe2081cc04c5826a5838f&language=en&q=money";
+    
+    var newsUrl = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
     fetch(newsUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
                 displayNews(data)
+                console.log(data)
+                console.log(data.Data.length)
             });
         } else {
             alert('Error: ' + response.statusText);
@@ -49,18 +52,18 @@ function getNews() {
 };
 
 var newsLinksContainer = document.getElementById("newsLinks");
+ var newsEl = document.createElement('ul');
 
 function displayNews(data) {
-    const newsList = data.results;
+    const newsList = data.Data;
     if (newsList.length === 0) {
         newsLinksContainer.textContent = 'No News found.';
         return;
     }
     for (var i = 0; i < 5; i++) {
-        var newsEl = document.createElement('ul');
         var newsLink = document.createElement('li');
         var newsLinkEl = document.createElement('a')
-        newsLinkEl.setAttribute('href', newsList[i].link);
+        newsLinkEl.setAttribute('href', newsList[i].guid);
         var newsTitleEl = document.createElement('span');
         newsTitleEl.innerHTML = newsList[i].title;
         newsLinkEl.appendChild(newsTitleEl);
@@ -69,7 +72,5 @@ function displayNews(data) {
         newsLinksContainer.appendChild(newsEl);
     }
 }
-
-
 
 getNews();
