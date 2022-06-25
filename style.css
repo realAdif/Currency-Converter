@@ -1,5 +1,5 @@
 body{
-    background-color: #c1ffc1;
+    background-color: white;
     max-width: 500px;
     margin: auto;
     background-image: url(images/rainingmoney.gif);
@@ -78,4 +78,9 @@ body{
    border-radius: 10px;
    font-size: 25px;
    text-align: center;
+ }
+
+ #newsLinks a{
+   text-decoration: none;
+
  }
