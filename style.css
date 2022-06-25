@@ -104,9 +104,9 @@ body{
  
  #newsLinks a{
    text-decoration: none;
-   color: black;
-   
+   color: black;  
  }
+ 
  #newsLinks li:before{
    content: '💡 ';
  }
