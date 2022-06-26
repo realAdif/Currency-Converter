@@ -1,41 +1,51 @@
-var requestUrl = 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=AUD,JPY,EUR&tryConversion=true'
-var testUrl = 'https://v6.exchangerate-api.com/v6/cf8dd31c0dcdffdf669dd241/pair/EUR/USD/50.00';
+// var currencyAPI = 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=AUD,JPY,EUR&tryConversion=true';
+
+// currency Elements
 var exchangeRate = document.querySelector('#rate');
 var buttonEl = document.querySelector('#button');
-var cryptoOption = document.querySelector('#optionCrypto');
+var toCurrencyEl = document.querySelector('#ToCurrency');
+var formCurrencyEl = document.querySelector('#FormnCurrency');
+var conversionRateEl = document.querySelector("#rate");
+var conversionResultEl = document.querySelector("#result");
+var currencyAmountEl = document.querySelector('#amount');
+// news Elements 
 var newsEl = document.getElementById('newsList');
-var pageNumber = document.getElementById('page')
-var prevButton = document.getElementById('btn_prev')
-var nextButton = document.getElementById('btn_next')
+var pageNumber = document.getElementById('page');
+var prevButton = document.getElementById('btn_prev');
+var nextButton = document.getElementById('btn_next');
 
-function API() {
-    fetch(testUrl)
-        .then(function (r) {
-            console.log(r);
-            r.json()
-                .then(function (data) {
-                    console.log(data);
-                })
-        })
-}
-API();
+// All of Currency Functions
+
+
 
 buttonEl.addEventListener('click', function () {
-
-    console.log(cryptoOption.value);
-    fetch(requestUrl)
-
-        .then(function (r) {
-            console.log(r)
-            r.json()
-                .then(function (data) {
-                    console.log(data);
-                    return exchangeRate.textContent = data.AUD
-                })
-
-        })
+   
+    if(toCurrencyEl.value == formCurrencyEl.value){
+        alert("You can not convert the same currency");
+    }else{
+        var toCurrency = toCurrencyEl.value;
+        var formCurrency = formCurrencyEl.value;
+        var currencyAmount = currencyAmountEl.value;
+        var currencyAPI = 'https://v6.exchangerate-api.com/v6/cf8dd31c0dcdffdf669dd241/pair/'+toCurrency+'/'+formCurrency+'/'+currencyAmount;
+        fetch(currencyAPI)
+        .then(function(response){
+        if(response.ok){
+            response.json()
+            .then(function(data){
+                conversionRateEl.textContent = data.conversion_rate
+                conversionResultEl.textContent = "$" + data.conversion_result
+            })
+        }else{
+            alert('Error:', response.statusText);
+        }
+    })
+    }
+    
+    
 });
 
+
+// All of News functions
 var newsItems = []
 function getNews() {
     var newsUrl = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
