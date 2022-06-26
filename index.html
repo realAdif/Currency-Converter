@@ -10,38 +10,42 @@
   <body>
     <div id="header">
       <h1>Currency Converter</h1>
-      <div id="description">
-        Converts amounts from one currency to two others. You can choose to
-        display three different currencies, euros, yen, or dollars, and enter a
-        value in one currency to be converted into the other selected
-        currencies.
-      </div>
     </div>
 
-    <section id="main">
-      <section id="input">
-        <div id="numberOfCrypto">Currency One:</div>
-        <input id="amount" type="number" value="1" min="1" max="100" />
-        <select id="optionCurrency">
-          <option>AUD</option>
-          <option>USD</option>
-          <option>AED</option>
-          <option>INR</option>
-        </select>
-      </section>
-      <br />
+      <section id="main">
 
-      <section id="cryptoInput">
-        <div id="numberOfCrypto">Currency Two:</div>
-        <select id="optionCurrency">
-          <option>AUD</option>
-          <option>USD</option>
-          <option>AED</option>
-          <option>INR</option>
-        </select>
+        <div id="description">
+          Converts amounts from one currency to two others. You can choose to
+          display three different currencies, euros, yen, or dollars, and enter a
+          value in one currency to be converted into the other selected
+          currencies.
+        </div>
+
+        <br>
+
+        <section id="input">
+          <div id="numberOfCrypto">Currency One:</div>
+          <input id="amount" type="number" value="1" min="1" max="100" />
+          <select id="optionCurrency">
+            <option>AUD</option>
+            <option>USD</option>
+            <option>AED</option>
+            <option>INR</option>
+          </select>
+        </section>
         <br />
-      </section>
 
+        <section id="cryptoInput">
+          <div id="numberOfCrypto">Currency Two:</div>
+          <select id="optionCurrency">
+            <option>AUD</option>
+            <option>USD</option>
+            <option>AED</option>
+            <option>INR</option>
+          </select>
+          <br />
+        </section>
+        
       <br />
 
       <section id="ExchangeRate">
@@ -62,7 +66,6 @@
       <div id="newsBottom">
         <button id="btn_prev">Prev</button>
         <span id="page"></span>
-        <!-- <div class="currentPage">page: </div> -->
         <button id="btn_next">Next</button>
       </div>
     </section>
