@@ -1,11 +1,11 @@
 body{
-    background-color: #8fbc8f;
-    max-width: 500px;
-    margin: auto;
-    background-image: url(images/rainingmoney.gif);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #c1ffc1;
+  max-width: 500px;
+  margin: auto;
+  background-image: url(images/rainingmoney.gif);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #input,#ExchangeRate,#cryptoInput{
@@ -32,13 +32,20 @@ body{
     background-color: #698b69;
     position: relative;
     right: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 49px;
+    display: block;
  }
 
  #header,#footer{
    position: relative;
    right: 300px;
    padding: 10px;
+   margin: 10px;
+   border-radius: 10px;
    font-family: serif;
+   background-color: #698b69
  }
 
  #button{
@@ -76,14 +83,16 @@ body{
    margin-right: 20%;
    height: 64%; 
    width: 300px;
-   position:fixed;
+   position: absolute;
    top: 0; 
-   right: 90px;
+   right: -20px;
    background-color: #698b69; 
    padding-top: 20px;
+   padding-bottom: 30px;
    border-radius: 10px;
    font-size: 25px;
    text-align: center;
+   
  }
 
  #newsTitle{
@@ -97,7 +106,7 @@ body{
  #newsLinks ul li{
    font-size: 70%;    
    text-align: left;
-   margin-bottom: 15%;
+   margin-bottom: 10%;
    margin-right: 5%;
    list-style: none;
  }
@@ -122,4 +131,16 @@ body{
     margin: 10%;
     font-size: 100%; 
     border-radius: 10px;
+ }
+
+ #description{
+  display: inline-block;
+  background-color: #698b69;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size:larger;
+ }
+
+ #footer{
+  margin-top: 150px;
  }
