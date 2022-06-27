@@ -15,9 +15,6 @@ var prevButton = document.getElementById('btn_prev');
 var nextButton = document.getElementById('btn_next');
 
 // All of Currency Functions
-
-
-
 buttonEl.addEventListener('click', function () {
    
     if(toCurrencyEl.value == formCurrencyEl.value){
@@ -40,7 +37,14 @@ buttonEl.addEventListener('click', function () {
         }
     })
     }
-    
+    localStorage.setItem('from',formCurrency);
+    localStorage.setItem('to',toCurrency);
+    var to = localStorage.getItem('to');
+    var from = localStorage.getItem('from');
+    console.log(to);
+    console.log(from);
+    toCurrencyEl.value = to;
+    formCurrencyEl.value = from;
     
 });
 
