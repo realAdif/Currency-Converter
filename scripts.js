@@ -8,7 +8,8 @@ var fromCurrencyEl = document.querySelector('#fromCurrency');
 var conversionRateEl = document.querySelector("#rate");
 var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
-var apiKeys = ['86b58b13edb4f7f71b662093', 'acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c']
+var apiKeys = ['86b58b13edb4f7f71b662093', 'acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c'];
+var errorEl = document.getElementById('error')
 // news Elements 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
@@ -19,8 +20,9 @@ var nextButton = document.getElementById('btn_next');
 buttonEl.addEventListener('click', function () {
 
     if (toCurrencyEl.value == fromCurrencyEl.value) {
-        alert("You can not convert the same currency");
-    } else {
+        errorEl.style.display ='block';
+    }else{
+        errorEl.style.display ='none';
         var toCurrency = toCurrencyEl.value;
         var fromCurrency = fromCurrencyEl.value;
         var currencyAmount = currencyAmountEl.value;
@@ -34,7 +36,7 @@ buttonEl.addEventListener('click', function () {
                             conversionResultEl.textContent = "$" + data.conversion_result
                         })
                 } else {
-                    alert('Error:', response.statusText);
+                    console.log('Error:', response.statusText);
                 }
             })
     }
@@ -57,7 +59,7 @@ function getNews() {
                 changePage(1);
             });
         } else {
-            alert('Error: ' + response.statusText);
+            console.log('Error: ' + response.statusText);
         }
     });
 };
