@@ -16,6 +16,8 @@ For this project, Our goal was to create a web page that, not only, allowed the 
  <br />
 <br />
 
+test
+
 ## **Acceptance Criteria**
 <br />
 GIVEN a currency converter page <br />
