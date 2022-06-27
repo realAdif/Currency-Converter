@@ -8,7 +8,7 @@ var formCurrencyEl = document.querySelector('#FormnCurrency');
 var conversionRateEl = document.querySelector("#rate");
 var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
-var apiKeys =['86b58b13edb4f7f71b662093','acc8143fb7c97c624d135788',]
+var apiKeys =['86b58b13edb4f7f71b662093','acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c']
 // news Elements 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
