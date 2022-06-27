@@ -8,6 +8,7 @@ var formCurrencyEl = document.querySelector('#FormnCurrency');
 var conversionRateEl = document.querySelector("#rate");
 var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
+var apiKeys =['86b58b13edb4f7f71b662093',]
 // news Elements 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
@@ -23,7 +24,7 @@ buttonEl.addEventListener('click', function () {
         var toCurrency = toCurrencyEl.value;
         var formCurrency = formCurrencyEl.value;
         var currencyAmount = currencyAmountEl.value;
-        var currencyAPI = 'https://v6.exchangerate-api.com/v6/cf8dd31c0dcdffdf669dd241/pair/'+toCurrency+'/'+formCurrency+'/'+currencyAmount;
+        var currencyAPI = 'https://v6.exchangerate-api.com/v6/'+apiKeys[0]+'/pair/'+toCurrency+'/'+formCurrency+'/'+currencyAmount;
         fetch(currencyAPI)
         .then(function(response){
         if(response.ok){
