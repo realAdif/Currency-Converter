@@ -3,12 +3,12 @@
 // currency Elements
 var exchangeRate = document.querySelector('#rate');
 var buttonEl = document.querySelector('#button');
-var toCurrencyEl = document.querySelector('#ToCurrency');
-var formCurrencyEl = document.querySelector('#FormnCurrency');
+var toCurrencyEl = document.querySelector('#toCurrency');
+var fromCurrencyEl = document.querySelector('#fromCurrency');
 var conversionRateEl = document.querySelector("#rate");
 var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
-var apiKeys =['86b58b13edb4f7f71b662093','acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c']
+var apiKeys = ['86b58b13edb4f7f71b662093', 'acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c']
 // news Elements 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
@@ -17,38 +17,34 @@ var nextButton = document.getElementById('btn_next');
 
 // All of Currency Functions
 buttonEl.addEventListener('click', function () {
-   
-    if(toCurrencyEl.value == formCurrencyEl.value){
+
+    if (toCurrencyEl.value == fromCurrencyEl.value) {
         alert("You can not convert the same currency");
-    }else{
+    } else {
         var toCurrency = toCurrencyEl.value;
-        var formCurrency = formCurrencyEl.value;
+        var fromCurrency = fromCurrencyEl.value;
         var currencyAmount = currencyAmountEl.value;
-        var currencyAPI = 'https://v6.exchangerate-api.com/v6/'+apiKeys[0]+'/pair/'+toCurrency+'/'+formCurrency+'/'+currencyAmount;
+        var currencyAPI = 'https://v6.exchangerate-api.com/v6/' + apiKeys[0] + '/pair/' + toCurrency + '/' + fromCurrency + '/' + currencyAmount;
         fetch(currencyAPI)
-        .then(function(response){
-        if(response.ok){
-            response.json()
-            .then(function(data){
-                conversionRateEl.textContent = data.conversion_rate
-                conversionResultEl.textContent = "$" + data.conversion_result
+            .then(function (response) {
+                if (response.ok) {
+                    response.json()
+                        .then(function (data) {
+                            conversionRateEl.textContent = data.conversion_rate
+                            conversionResultEl.textContent = "$" + data.conversion_result
+                        })
+                } else {
+                    alert('Error:', response.statusText);
+                }
             })
-        }else{
-            alert('Error:', response.statusText);
-        }
-    })
     }
-    localStorage.setItem('from',formCurrency);
-    localStorage.setItem('to',toCurrency);
-    var to = localStorage.getItem('to');
-    var from = localStorage.getItem('from');
-    console.log(to);
-    console.log(from);
-    toCurrencyEl.value = to;
-    formCurrencyEl.value = from;
-    
+    localStorage.setItem('from', fromCurrency);
+    localStorage.setItem('to', toCurrency);
+
 });
 
+toCurrencyEl.value = localStorage.getItem('to');
+fromCurrencyEl.value = localStorage.getItem('from');
 
 // All of News functions
 var newsItems = []
