@@ -26,7 +26,7 @@ buttonEl.addEventListener('click', function () {
         var toCurrency = toCurrencyEl.value;
         var fromCurrency = fromCurrencyEl.value;
         var currencyAmount = currencyAmountEl.value;
-        var currencyAPI = 'https://v6.exchangerate-api.com/v6/' + apiKeys[0] + '/pair/' + toCurrency + '/' + fromCurrency + '/' + currencyAmount;
+        var currencyAPI = 'https://v6.exchangerate-api.com/v6/' + apiKeys[0] + '/pair/' + fromCurrency + '/' + toCurrency + '/' + currencyAmount;
         fetch(currencyAPI)
             .then(function (response) {
                 if (response.ok) {
