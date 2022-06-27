@@ -44,6 +44,8 @@ body {
 
 #header,
 #footer {
+  width: 120%;
+  text-align: center;
   position: relative;
   right: 300px;
   padding: 3px;
@@ -94,7 +96,7 @@ body {
 #news {
   margin-top: 120px;
   margin-right: 20%;
-  height: 64%;
+  height: auto;
   width: 300px;
   position: absolute;
   top: 0;
@@ -167,3 +169,128 @@ body {
  #footer{
   text-align: center;
  }
+
+ @media screen and (max-width: 992px) {
+
+  #header, #footer {
+    width: 100%;
+    right: 300px;
+    padding: 3px;
+    border-radius: 10px;
+    font-family: serif;
+    background-color: #698b69;
+    margin-top: 20px;
+    position: static;
+}
+
+#main {
+  width: 60%;
+  padding: 100px;
+  border: 5px solid #698b69;
+  border-radius: 10px;
+  background-color: #698b69;
+  right: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 20px;
+  position: static;
+
+}
+
+#news {
+  width: 102%;
+  margin-top: 21px;
+  margin-right: 20%;
+  height: auto;
+  top: 0;
+  right: -20px;
+  background-color: #698b69;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  font-size: 25px;
+  text-align: center;
+  flex-direction: column;
+  position: static;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+#header, #footer { 
+    width: 99%;
+    right: 300px;
+    padding: 3px;
+    border-radius: 10px;
+    font-family: serif;
+    background-color: #698b69;
+    margin-top: 20px;
+    position: static;
+}
+
+#main {
+    width: 60%;
+    padding: 100px;
+    border: 5px solid #698b69;
+    border-radius: 10px;
+    background-color: #698b69;
+    right: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    position: static;
+}
+
+#main {
+    width: 47%;
+    padding: 100px;
+    border: 5px solid #698b69;
+    border-radius: 10px;
+    background-color: #698b69;
+    right: 300px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    position: static;
+}
+
+#input, #ExchangeRate, #cryptoInput {
+  width: 90%;
+  font-size: 25px;
+  padding: 10px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-radius: 10px;
+  background-color: #c1ffc1;
+}
+
+#button {
+  padding: 12px 28px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px 0, 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 10px;
+  font-size: 100%;
+  margin-left: 0%;
+  width: 100%;
+}
+
+#news {
+  width: 100%;
+  margin-top: 21px;
+  margin-right: 20%;
+  height: auto;
+  top: 0;
+  right: -20px;
+  background-color: #698b69;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  font-size: 25px;
+  text-align: center;
+  flex-direction: column;
+  position: static;
+}
+
+}
