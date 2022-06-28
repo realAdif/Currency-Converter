@@ -16,7 +16,6 @@ var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
 var prevButton = document.getElementById('btn_prev');
 var nextButton = document.getElementById('btn_next');
-console.log(fromCurrencyInfoEl);
 // All of Currency Functions
 
 buttonEl.addEventListener('click', function () {
