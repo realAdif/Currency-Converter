@@ -9,14 +9,16 @@ var conversionRateEl = document.querySelector("#rate");
 var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
 var apiKeys = ['86b58b13edb4f7f71b662093', 'acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c'];
-var errorEl = document.getElementById('error')
+var apiIndex = 0;
+var errorEl = document.getElementById('error');
 // news Elements 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
 var prevButton = document.getElementById('btn_prev');
 var nextButton = document.getElementById('btn_next');
-
+console.log(fromCurrencyInfoEl);
 // All of Currency Functions
+
 buttonEl.addEventListener('click', function () {
 
     if (toCurrencyEl.value == fromCurrencyEl.value) {
@@ -25,8 +27,13 @@ buttonEl.addEventListener('click', function () {
         errorEl.style.display ='none';
         var toCurrency = toCurrencyEl.value;
         var fromCurrency = fromCurrencyEl.value;
-        var currencyAmount = currencyAmountEl.value;
-        var currencyAPI = 'https://v6.exchangerate-api.com/v6/' + apiKeys[0] + '/pair/' + fromCurrency + '/' + toCurrency + '/' + currencyAmount;
+        var currencyAmount = currencyAmountEl.value;      
+        apiIndex++;
+        var currencyAPI = 'https://v6.exchangerate-api.com/v6/' + apiKeys[apiIndex] + '/pair/' + fromCurrency + '/' + toCurrency + '/' + currencyAmount;
+        if(apiIndex == apiKeys.length){
+            apiIndex = 0;
+        }
+        console.log(apiIndex, currencyAPI)
         fetch(currencyAPI)
             .then(function (response) {
                 if (response.ok) {
@@ -44,6 +51,7 @@ buttonEl.addEventListener('click', function () {
     localStorage.setItem('to', toCurrency);
 
 });
+
 
 toCurrencyEl.value = localStorage.getItem('to');
 fromCurrencyEl.value = localStorage.getItem('from');
