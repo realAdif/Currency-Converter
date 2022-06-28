@@ -18,12 +18,17 @@ var prevButton = document.getElementById('btn_prev');
 var nextButton = document.getElementById('btn_next');
 // All of Currency Functions
 
+function openModal() {
+    $('#myModal').modal('show');
+}
+
 buttonEl.addEventListener('click', function () {
 
-    if (toCurrencyEl.value == fromCurrencyEl.value) {
-        errorEl.style.display ='block';
-    }else{
-        errorEl.style.display ='none';
+    if (toCurrencyEl.value == fromCurrencyEl.value) 
+
+    openModal();
+        
+    else{
         var toCurrency = toCurrencyEl.value;
         var fromCurrency = fromCurrencyEl.value;
         var currencyAmount = currencyAmountEl.value;      
