@@ -1,11 +1,9 @@
 body {
   background-color: #c1ffc1;
-  max-width: 500px;
+
   margin: auto;
-  background-image: url(images/rainingmoney.gif);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* background-image: url(images/rainingmoney.gif); */
+  
 }
 
 #input,
@@ -27,6 +25,12 @@ body {
 #main:hover {
   box-shadow: 0px 0px 10px 10px #8fbc8f;
 }
+/* .row{
+  border: 1px solid red;
+}
+.col{
+  border: 1px solid blue;
+} */
 
 #main {
   width: 390px;
@@ -34,25 +38,28 @@ body {
   border: 5px solid #698b69;
   border-radius: 10px;
   background-color: #698b69;
-  position: relative;
   right: 300px;
-  padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 20px;
   display: block;
+ 
+  margin-top: 10px;
 }
 
-#header,
-#footer {
-  width: 120%;
+#header{
+  width: 100%;
   text-align: center;
-  position: relative;
-  right: 300px;
-  padding: 3px;
-  border-radius: 10px;
-  font-family: serif;
-  background-color: #698b69;
-  margin-top:20px;
+  background-image: url(images/rainingmoney.gif); 
+  padding: 10px 0;
+  color: black;
+  top: 0;
+ 
+}
+#footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+  bottom: 0;
 }
 
 #button {
