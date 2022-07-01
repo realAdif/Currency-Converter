@@ -10,13 +10,11 @@ var conversionResultEl = document.querySelector("#result");
 var currencyAmountEl = document.querySelector('#amount');
 var apiKeys = ['86b58b13edb4f7f71b662093', 'acc8143fb7c97c624d135788', '283ca082e3eb50ce3de7d61c'];
 var apiIndex = 0;
-var errorEl = document.getElementById('error');
-// news Elements 
+var errorEl = document.getElementById('error'); 
 var newsEl = document.getElementById('newsList');
 var pageNumber = document.getElementById('page');
 var prevButton = document.getElementById('btn_prev');
 var nextButton = document.getElementById('btn_next');
-// All of Currency Functions
 
 function openModal() {
     $('#myModal').modal('show');
@@ -56,11 +54,8 @@ buttonEl.addEventListener('click', function () {
 
 });
 
-
 toCurrencyEl.value = localStorage.getItem('to');
 fromCurrencyEl.value = localStorage.getItem('from');
-
-// All of News functions
 var newsItems = []
 function getNews() {
     var newsUrl = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"

@@ -1,5 +1,6 @@
 ## **Currency Converter**
 <br />
+Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby Hurst, Michael Clancy
 
 ## **Introduction** 
 <br />
@@ -40,13 +41,13 @@ THEN I am presented with the detail of the news <br />
 
 ## **Deployed Site link**
  <br />
-
+https://realadif.github.io/Currency-Converter/
  <br />
 
 ## **Screenshot of Deployed Site**
  <br />
-
-  <br />
+<img src="./images/screenshot.png">
+<br />
 
 ## **References**
  <br />
@@ -57,7 +58,4 @@ THEN I am presented with the detail of the news <br />
 
  <br />
 
-## **Credits**
- <br />
-Created by Aditya Gaikwad, Chujun Liu, Julio Luiz Dos Santos, Ruby Hurst, Michael Clancy © 2022
 
